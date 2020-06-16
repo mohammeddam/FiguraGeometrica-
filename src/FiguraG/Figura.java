@@ -9,19 +9,19 @@ public class Figura {
 		 * Queremos averiguar si la figura introducida es un cuadrado o un rectángulo y
 		 * mostrar su perímetro.
 		 */
-		int b, a;
-		String f;
+		int base, altura;
+		String figura;
 		teclado = new Scanner(System.in);
 		System.out.print("Introduce la base de la figura: ");
-		b = teclado.nextInt();
+		base = teclado.nextInt();
 		System.out.print("Introduce la altura del figura: ");
-		a = teclado.nextInt();
-		if (b == a) {
-			f = "cuadrado";
+		altura = teclado.nextInt();
+		if (base == altura) {
+			figura = "cuadrado";
 		} else {
-			f = "rectángulo";
+			figura = "rectángulo";
 		}
-		int perimetro = 2 * b + 2 * a;
-		System.out.println("La figura es un " + f + " y su perímetro es: " + perimetro);
+		int perimetro = 2 * base + 2 * altura;
+		System.out.println("La figura es un " + figura + " y su perímetro es: " + perimetro);
 	}
 }
