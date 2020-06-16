@@ -16,12 +16,18 @@ public class Figura {
 		base = teclado.nextInt();
 		System.out.print("Introduce la altura del figura: ");
 		altura = teclado.nextInt();
-		if (base == altura) {
-			figura = "cuadrado";
-		} else {
-			figura = "rectángulo";
-		}
+		figura = tipoF.tipofigura(base, altura);
 		int perimetro = 2 * base + 2 * altura;
 		System.out.println("La figura es un " + figura + " y su perímetro es: " + perimetro);
+	}
+
+	/**
+	 * @param base
+	 * @param altura
+	 * @return
+	 * @deprecated Use {@link tipoF#tipofigura(int,int)} instead
+	 */
+	public static String tipofigura(int base, int altura) {
+		return tipoF.tipofigura(base, altura);
 	}
 }
